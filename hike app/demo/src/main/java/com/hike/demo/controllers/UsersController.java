@@ -44,6 +44,7 @@ public class UsersController {
         String newLocation = newuser.get("location");
         String tempAge = newuser.get("age");
         String tempId = newuser.get("idddd");
+        String pass = newuser.get("password");
         //int id = Integer.parseInt(tempId);
         
         if (tempAge.length() == 0 || newDifficulty.length() == 0 || newName.length() == 0 || newLocation.length() == 0 || newEmail.length() == 0) {
@@ -86,7 +87,7 @@ public class UsersController {
 
         userRepo.delete(u); //delete from database
 
-        userRepo.save(new User(newName, newAge, newEmail, newLocation, newDifficulty));
+        userRepo.save(new User(newName, newAge, newEmail, newLocation, newDifficulty, pass));
 
         return "user/edited";
     }
