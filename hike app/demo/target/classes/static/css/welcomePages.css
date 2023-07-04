@@ -2,11 +2,24 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#box{
+#boxLogin{
     padding: 20px;
     border-radius: 25px;
     width: 400px;
     height: 600px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #f8DDA4;
+    opacity: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+#boxRegister{
+    padding: 20px;
+    border-radius: 25px;
+    width: 400px;
+    height: 800px;
     margin: auto;
     margin-top: 50px;
     background-color: #f8DDA4;
@@ -64,9 +77,10 @@ body{
     width: 200px;
     margin: 20px auto;
     border-radius: 10px;
+    opacity: 1;
 }
 
-.small_login, .small_register, .return{
+.small_login, .return{
     font-size: 8pt;
     color: rgb(255, 255, 255);
     border: none;
@@ -79,11 +93,19 @@ body{
     border-radius: 10px;
 }
 
-.login-form, .register-form{
+.login-form{
     height: 500px;
     width: 400px;
     transition: all 0.5s ease-in-out;
     padding: 20px 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.register-form{
+    height: 800px;
+    width: 400px;
+    padding: 20px 0px;
     position: absolute;
     z-index: 2;
 }
@@ -94,28 +116,30 @@ body{
 }
 
 .register-form{
-    top: 100px;
-    left: 500px;
+    top: 20px;
+    right: 105px;
 }
 
 .loginButton-hide, .registerButton-hide{
-    visibility: hidden;
-    transition: opacity 250ms ease-out;
-    opacity: 0;
+    animation: fadeOut 0.3s linear forwards;
 }
 
-.return-visible{
-    transition: opacity 250ms ease-in;
-    visibility: visible;
-    opacity: 100;
+.loginButton-show, .registerButton-show{
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .login-form-move{
     right: 105px;
-}
-
-.register-form-move{
-    left: -65px;
 }
 
 .userLogin, .userRegister{
@@ -125,7 +149,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0px 40px;
+    padding: 20px 40px;
 }
 
 .userLogin{
@@ -133,7 +157,7 @@ body{
 }
 
 .userRegister{
-    gap: 20px;
+    gap:20px;
 }
 
 .userElement{
@@ -141,8 +165,9 @@ body{
     width: 300px;
     outline: none;
     border: none;
-    background-color: #d9d9d9;
+    background-color: #f0f0f0;
     border-radius: 10px;
     padding-left: 30px;
+    padding-right: 30px;
 }
 

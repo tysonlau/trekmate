@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to TrekMate</title>
-    <link rel="stylesheet" href="css/welcomePage.css">
+    <link rel="stylesheet" href="css/welcomePages.css">
     <script src="js/welcomeAnimation.js" defer></script>
     <style>
         body{
@@ -22,28 +22,20 @@
     </header>
     <p class="genericText">Login now, or if you're new, sign up using Register.</p>
     
-    <div id="box">
+    <div id="boxLogin">
         <div class="buttons">
-            <button class="loginButton">Login</button><br>
-            <button class="registerButton">Register</button>
+            <button type="button" class="loginButton">Login</button><br>
+            <button type="button" onclick="window.location.href='/register.html'" class="registerButton">Register</button>
         </div>
 
         <div class="login-form">
             <div class="userLogin">
-                <input type="email" class="userElement" placeholder="Email">
-                <input type="text" class="userElement" placeholder="Password">
-                <button class="small_login">Login</button>
-                <button class="return">Go back</button>
-            </div>
-        </div>
-
-        <div class="register-form">
-            <div class="userRegister">
-                <input type="email" class="userElement" placeholder="Email">
-                <input type="text" class="userElement" placeholder="Password">
-                <input type="age" class="userElement" placeholder="Age">
-                <button class="small_register">Register</button>
-                <button class="return">Go back</button>
+                <form class="userLogin" action="/login" method="get">
+                    <input type="email" class="userElement" placeholder="Email">
+                    <input type="password" class="userElement" placeholder="Password">
+                    <button type="submit" class="small_login">Login</button>
+                    <button type="button" class="return">Go back</button>
+                </form>
             </div>
         </div>
     </div>
