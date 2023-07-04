@@ -23,6 +23,27 @@ public class UsersController {
     @Autowired
     private UserRepository userRepo;
 
+    @GetMapping("/user/adminView")
+    public String getAdmin(Model model){
+        System.out.println("Getting all students");
+        // TODO: get all students from database
+        List<User> users = userRepo.findAll();
+        
+        model.addAttribute("us", users);
+        return "students/admin";
+    }
+
+    @PostMapping("/user/remove")
+    public String removeStudent(Model model, @RequestParam(name = "uidd") String uid, HttpServletResponse response){
+
+        System.out.println("d");
+        System.out.println("Delete User " + uid);
+        User u = userRepo.findById(uid).get(0);
+        userRepo.delete(u); //delete from database
+
+        return "user/removedUser";
+    }
+
     @PostMapping("/user/userPage/{id}/edit")
     public String editStudent(Model model, @RequestParam(name = "uiddd") String id, HttpServletResponse response){
         //List<Student> student = studentRepo.findByUid(uid);  

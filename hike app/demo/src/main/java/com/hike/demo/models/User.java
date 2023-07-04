@@ -13,15 +13,17 @@ public class User {
     private String email;
     private String location;
     private String difficulty;
+    private String password;
 
     public User() {
     }
-    public User(String name, int age, String email, String location, String difficulty) {
+    public User(String name, int age, String email, String location, String difficulty, String password) {
         this.name = name;
         this.age = age;
         this.location = location;
         this.difficulty = difficulty;
         this.email = email;
+        this.password = password;
     }
     public String getName() {
         return name;
@@ -62,6 +64,13 @@ public class User {
     }
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
     }
     
 }
