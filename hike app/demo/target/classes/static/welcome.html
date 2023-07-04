@@ -30,9 +30,10 @@
 
         <div class="login-form">
             <div class="userLogin">
-                <form class="userLogin" action="/login" method="get">
-                    <input type="email" class="userElement" placeholder="Email">
-                    <input type="password" class="userElement" placeholder="Password">
+                <form class="userLogin" action="login" method="post">
+                    <!--input type="email" class="userElement" placeholder="Email"-->
+                    <input type="text" class="userElement" name="username" autocomplete="username" placeholder="Username">
+                    <input type="password" class="userElement" name="password" autocomplete="current-password" placeholder="Password">
                     <button type="submit" class="small_login">Login</button>
                     <button type="button" class="return">Go back</button>
                 </form>
