@@ -1,4 +1,4 @@
-package com.hike.demo.controllers;
+/*package com.hike.demo.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.hike.demo.models.User;
-import com.hike.demo.models.UserRepository;
+import com.hike.demo.models.UserRepository2;
 
 import jakarta.servlet.http.HttpServletResponse;
 
@@ -21,7 +21,7 @@ import jakarta.servlet.http.HttpServletResponse;
 public class UsersController {
 
     @Autowired
-    private UserRepository userRepo;
+    private UserRepository2 userRepo;
 
     @GetMapping("/user/adminView")
     public String getAdmin(Model model){
@@ -112,4 +112,4 @@ public class UsersController {
 
         return "user/edited";
     }
-}
+}*/

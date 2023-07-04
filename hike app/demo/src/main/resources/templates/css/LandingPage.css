@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Poppins',sans-serif;
 }
 
 
@@ -12,8 +12,9 @@
 navbar */
 
 .navbar{
-	position: absolute;
+	position: fixed;
 	top: 0;
+    background-color: #ffffff;
 	z-index: 99999;
 	padding:25px 0;
 }
@@ -46,7 +47,7 @@ navbar */
 /*slides... #slides = the id of the slide show*/
 #slides{
 	position: relative;
-    padding-top: 0;
+    padding-top: 180px;
     padding-left: 0;
     padding-right: 0;
 	height: 100vh;
@@ -148,6 +149,11 @@ navbar */
     --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
 }
 
+body {
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
 
 h1,h2,h3,h4,h5,h6,
 .display-4 {
@@ -181,12 +187,6 @@ img {
     box-shadow: none;
     transform: translateY(5px);
 }
-
-.feat{
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
 
 .iconbox {
     width: 56px;
@@ -262,8 +262,8 @@ form .form-control {
 }
 
 .footer-top {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 90px;
+    padding-bottom: 90px;
     background-color:#175230;
 }
 

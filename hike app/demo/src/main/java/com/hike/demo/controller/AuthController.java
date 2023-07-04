@@ -24,17 +24,17 @@ public class AuthController {
         this.userService = userService;
     }
 //landing page
-    @GetMapping("index")
+    @GetMapping("/landingPage")
     public String home(){
-        return "index";
+        return "LandingPage";
     }
 //"log out" also directs here. see html for more 
     @GetMapping("/login")
     public String loginForm() {
-        return "login";
+        return "welcome";
     }
 
-    @GetMapping("register")
+    @GetMapping("/register")
     public String showRegistrationForm(Model model){
         UserDto user = new UserDto();
         model.addAttribute("user", user);

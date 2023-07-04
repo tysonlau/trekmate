@@ -29,13 +29,13 @@ public class SpringSecurity {
         http.csrf().disable()
                 .authorizeHttpRequests((authorize) ->
                         authorize.requestMatchers("/register/**").permitAll()
-                                .requestMatchers("/index").permitAll()
+                                .requestMatchers("/landingPage").permitAll()
                                 //show "/users" page with list of all users for users who are admin only 
                                 .requestMatchers("/users").hasRole("ADMIN")
                 ).formLogin(
                         form -> form
-                                .loginPage("/login")
-                                .loginProcessingUrl("/login")
+                                .loginPage("/welcome")
+                                .loginProcessingUrl("/welcome")
                                 //if log in is successfull go to "/users" page 
                                 .defaultSuccessUrl("/users")
                                 .permitAll()
