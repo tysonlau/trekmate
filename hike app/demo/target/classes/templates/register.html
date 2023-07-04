@@ -1,0 +1,13 @@
+
+            // what happens when user is successfully registered 
+            <div th:if="${param.success}">
+                <div class="alert alert-info">You've successfully registered
+                    to our app!</div>
+            </div>
+            //
+
+               // to connect form 
+                <form method="post" role="form" th:action="@{/register/save}" th:object="${user}">
+                //
+
+                   
