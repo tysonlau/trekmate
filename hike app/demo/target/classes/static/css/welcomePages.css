@@ -125,7 +125,7 @@ body{
 }
 
 .loginButton-show, .registerButton-show{
-    animation: fadeIn 0.3s;
+    animation: fadeIn 1s;
 }
 
 @keyframes fadeOut {
